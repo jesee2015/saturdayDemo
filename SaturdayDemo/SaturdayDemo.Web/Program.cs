@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SaturdayDemo.Infrastructure.DataBase;
 
 namespace SaturdayDemo.Web
 {
@@ -14,7 +16,16 @@ namespace SaturdayDemo.Web
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var webHost = CreateWebHostBuilder(args).Build();
+            using (var serviceScope = webHost.Services.CreateScope())
+            {
+                var ServiceProvider = serviceScope.ServiceProvider;
+                var loggerFactory = ServiceProvider.GetRequiredService<ILoggerFactory>();
+                var myDbContext = ServiceProvider.GetRequiredService<MyDbContext>();
+                MyDbContextSeed.SeedAsync(myDbContext, loggerFactory).Wait();
+            }
+
+            webHost.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

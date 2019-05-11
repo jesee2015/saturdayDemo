@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using SaturdayDemo.Core.interfaces;
 using SaturdayDemo.Infrastructure.DataBase;
+using SaturdayDemo.Infrastructure.Repositories;
 
 namespace SaturdayDemo.Web
 {
@@ -23,6 +25,9 @@ namespace SaturdayDemo.Web
             });
 
             services.AddMvc();
+            services.AddScoped<IBillItemRepository, BillItemRepository>();
+            services.AddScoped<ICashFlowRepository, CashFlowRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,7 +37,6 @@ namespace SaturdayDemo.Web
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseMvcWithDefaultRoute();
         }
     }

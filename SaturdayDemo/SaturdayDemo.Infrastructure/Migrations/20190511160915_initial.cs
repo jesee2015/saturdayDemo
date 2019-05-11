@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SaturdayDemo.Infrastructure.Migrations
 {
@@ -12,11 +13,12 @@ namespace SaturdayDemo.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    CreationDate = table.Column<int>(nullable: false),
+                    CreationDate = table.Column<DateTime>(nullable: false),
                     Market = table.Column<string>(nullable: true),
                     Shop = table.Column<string>(nullable: true),
                     ProductNoName = table.Column<string>(nullable: true),
-                    ProductNumber = table.Column<int>(nullable: false)
+                    ProductNumber = table.Column<int>(nullable: false),
+                    UserId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
