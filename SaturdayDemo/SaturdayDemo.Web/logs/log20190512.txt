@@ -1,0 +1,500 @@
+2019-05-12 18:41:38.275 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 18:41:39.422 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 18:41:39.567 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 18:41:39.807 +08:00 [WRN] Unable to bind to http://localhost:5000 on the IPv4 loopback interface: '以一种访问权限不允许的方式做了一个访问套接字的尝试。'.
+2019-05-12 18:41:39.809 +08:00 [WRN] Unable to bind to http://localhost:5000 on the IPv6 loopback interface: '以一种访问权限不允许的方式做了一个访问套接字的尝试。'.
+2019-05-12 18:41:39.812 +08:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://localhost:5000. ---> System.AggregateException: One or more errors occurred. (以一种访问权限不允许的方式做了一个访问套接字的尝试。) (以一种访问权限不允许的方式做了一个访问套接字的尝试。) ---> System.Net.Sockets.SocketException: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2019-05-12 18:43:03.055 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 18:43:04.089 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 18:43:04.214 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 18:43:05.064 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 18:43:05.281 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 18:43:05.296 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 18:43:05.301 +08:00 [ERR] 2019年5月12日
+2019-05-12 18:43:05.305 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 18:43:05.431 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 18:43:05.529 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 227.49470000000002ms.
+2019-05-12 18:43:05.539 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 18:43:05.623 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 338.2821ms
+2019-05-12 18:43:05.632 +08:00 [INF] Request finished in 568.1105ms 200 application/json; charset=utf-8
+2019-05-12 18:47:23.053 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 18:47:24.198 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 18:47:24.343 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 18:47:25.349 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 18:47:25.587 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 18:47:25.601 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 18:47:25.605 +08:00 [ERR] 2019年5月12日
+2019-05-12 18:47:25.609 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 18:47:25.717 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 18:47:25.810 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 204.5883ms.
+2019-05-12 18:47:25.820 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 18:47:25.907 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 315.5127ms
+2019-05-12 18:47:25.923 +08:00 [INF] Request finished in 574.2316ms 200 application/json; charset=utf-8
+2019-05-12 18:49:26.318 +08:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2019-05-12 18:49:26.946 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 18:49:27.020 +08:00 [DBG] Compiling query model: 
+'(from BillItem <generated>_1 in DbSet<BillItem>
+select [<generated>_1]).Count()'
+2019-05-12 18:49:27.053 +08:00 [DBG] Optimized query model: 
+'(from BillItem <generated>_1 in DbSet<BillItem>
+select [<generated>_1]).Count()'
+2019-05-12 18:49:27.187 +08:00 [DBG] (QueryContext queryContext) => IEnumerable<int> _InterceptExceptions(
+|__ source: IEnumerable<int> _ToSequence(() => int GetResult(
+|   |__ valueBuffers: IEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |           SELECT COUNT(*)
+|   |           FROM `BillItems` AS `b`), 
+|   |__ throwOnNullResult: False)), 
+|__ contextType: SaturdayDemo.Infrastructure.DataBase.MyDbContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+2019-05-12 18:49:27.291 +08:00 [DBG] Opening connection to database 'liulurong' on server '47.112.204.22'.
+2019-05-12 18:49:27.869 +08:00 [DBG] Opened connection to database 'liulurong' on server '47.112.204.22'.
+2019-05-12 18:49:27.885 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 18:49:27.911 +08:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 18:49:27.937 +08:00 [DBG] A data reader was disposed.
+2019-05-12 18:49:27.941 +08:00 [DBG] Closing connection to database 'liulurong' on server '47.112.204.22'.
+2019-05-12 18:49:27.945 +08:00 [DBG] Closed connection to database 'liulurong' on server '47.112.204.22'.
+2019-05-12 18:49:27.950 +08:00 [DBG] 'MyDbContext' disposed.
+2019-05-12 18:49:27.957 +08:00 [DBG] Hosting starting
+2019-05-12 18:49:28.038 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 18:49:28.044 +08:00 [DBG] Reading data from file 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys\key-4f1c39f3-f890-4329-937d-76435ea14000.xml'.
+2019-05-12 18:49:28.050 +08:00 [DBG] Reading data from file 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys\key-85496ea3-6fb5-4cad-a595-497c0c7778ec.xml'.
+2019-05-12 18:49:28.053 +08:00 [DBG] Reading data from file 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys\key-86b3d9e3-4da9-4562-bc38-f072147ee130.xml'.
+2019-05-12 18:49:28.060 +08:00 [DBG] Found key "4f1c39f3-f890-4329-937d-76435ea14000".
+2019-05-12 18:49:28.064 +08:00 [DBG] Found key "85496ea3-6fb5-4cad-a595-497c0c7778ec".
+2019-05-12 18:49:28.065 +08:00 [DBG] Found key "86b3d9e3-4da9-4562-bc38-f072147ee130".
+2019-05-12 18:49:28.073 +08:00 [DBG] Considering key "4f1c39f3-f890-4329-937d-76435ea14000" with expiration date "2019-06-02T11:45:30.7759347+00:00" as default key.
+2019-05-12 18:49:28.084 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2019-05-12 18:49:28.087 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+2019-05-12 18:49:28.090 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2019-05-12 18:49:28.093 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2019-05-12 18:49:28.097 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2019-05-12 18:49:28.102 +08:00 [DBG] Using key "4f1c39f3-f890-4329-937d-76435ea14000" as the default key.
+2019-05-12 18:49:28.103 +08:00 [DBG] Key ring with default key "4f1c39f3-f890-4329-937d-76435ea14000" was loaded during application startup.
+2019-05-12 18:49:28.133 +08:00 [DBG] Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value false
+2019-05-12 18:49:28.168 +08:00 [DBG] Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value false
+2019-05-12 18:49:28.170 +08:00 [DBG] Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value false
+2019-05-12 18:49:28.173 +08:00 [DBG] Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value false
+2019-05-12 18:49:28.174 +08:00 [DBG] Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value "AllExceptions"
+2019-05-12 18:49:28.176 +08:00 [DBG] Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value false
+2019-05-12 18:49:28.180 +08:00 [DBG] Compatibility switch EnableEndpointRouting in type MvcOptions is using default value false
+2019-05-12 18:49:28.181 +08:00 [DBG] Compatibility switch MaxValidationDepth in type MvcOptions is using default value null
+2019-05-12 18:49:28.183 +08:00 [DBG] Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value false
+2019-05-12 18:49:28.210 +08:00 [DBG] Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value true for version "Version_2_0"
+2019-05-12 18:49:28.212 +08:00 [DBG] Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value true for version "Version_2_0"
+2019-05-12 18:49:28.214 +08:00 [DBG] Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value true for version "Version_2_0"
+2019-05-12 18:49:28.219 +08:00 [DBG] Compatibility switch AllowAreas in type RazorPagesOptions is using default value false
+2019-05-12 18:49:28.221 +08:00 [DBG] Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value false
+2019-05-12 18:49:28.223 +08:00 [DBG] Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value false
+2019-05-12 18:49:28.228 +08:00 [DBG] Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value true
+2019-05-12 18:49:28.254 +08:00 [DBG] Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value false
+2019-05-12 18:49:28.255 +08:00 [DBG] Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value false
+2019-05-12 18:49:28.278 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2019-05-12 18:49:28.329 +08:00 [DBG] Failed to locate the development https certificate at 'null'.
+2019-05-12 18:49:28.352 +08:00 [DBG] Hosting started
+2019-05-12 18:49:28.353 +08:00 [DBG] Loaded hosting startup assembly SaturdayDemo.Web
+2019-05-12 18:49:28.886 +08:00 [DBG] Connection id "0HLMMOU118R9Q" started.
+2019-05-12 18:49:28.886 +08:00 [DBG] Connection id "0HLMMOU118R9P" started.
+2019-05-12 18:49:28.948 +08:00 [DBG] Connection id "0HLMMOU118R9P" received FIN.
+2019-05-12 18:49:28.948 +08:00 [DBG] Connection id "0HLMMOU118R9Q" received FIN.
+2019-05-12 18:49:28.971 +08:00 [DBG] Connection id "0HLMMOU118R9P" sending FIN because: "The client closed the connection."
+2019-05-12 18:49:28.971 +08:00 [DBG] Connection id "0HLMMOU118R9Q" sending FIN because: "The client closed the connection."
+2019-05-12 18:49:28.977 +08:00 [DBG] Connection id "0HLMMOU118R9Q" disconnecting.
+2019-05-12 18:49:28.977 +08:00 [DBG] Connection id "0HLMMOU118R9P" disconnecting.
+2019-05-12 18:49:28.984 +08:00 [DBG] Connection id "0HLMMOU118R9Q" stopped.
+2019-05-12 18:49:28.984 +08:00 [DBG] Connection id "0HLMMOU118R9P" stopped.
+2019-05-12 18:49:29.319 +08:00 [DBG] Connection id "0HLMMOU118R9R" started.
+2019-05-12 18:49:29.458 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 18:49:29.462 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2019-05-12 18:49:29.617 +08:00 [DBG] Request successfully matched the route with name 'null' and template 'api/billitem'
+2019-05-12 18:49:29.632 +08:00 [DBG] Action 'SaturdayDemo.Web.Controllers.BillItemController.Post (SaturdayDemo.Web)' with id 'a7e31020-d97d-4ccc-870e-a36cecb240b4' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+2019-05-12 18:49:29.659 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 18:49:29.661 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2019-05-12 18:49:29.662 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2019-05-12 18:49:29.664 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2019-05-12 18:49:29.666 +08:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2019-05-12 18:49:29.668 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2019-05-12 18:49:29.683 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 18:49:29.688 +08:00 [ERR] 2019年5月12日
+2019-05-12 18:49:29.692 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 18:49:29.703 +08:00 [DBG] Compiling query model: 
+'from BillItem <generated>_0 in DbSet<BillItem>
+select [<generated>_0]'
+2019-05-12 18:49:29.712 +08:00 [DBG] Optimized query model: 
+'from BillItem <generated>_0 in DbSet<BillItem>
+select [<generated>_0]'
+2019-05-12 18:49:29.751 +08:00 [DBG] (QueryContext queryContext) => IAsyncEnumerable<BillItem> _InterceptExceptions(
+|__ source: IAsyncEnumerable<BillItem> _TrackEntities(
+|   |__ results: IAsyncEnumerable<BillItem> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+|   |   |       FROM `BillItems` AS `b`, 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new BillItem()
+|   |           instance.<Id>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, BillItem.Id)
+|   |           instance.<CreationDate>k__BackingField = DateTime TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, BillItem.CreationDate)
+|   |           instance.<Market>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, BillItem.Market)
+|   |           instance.<Price>k__BackingField = float TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, BillItem.Price)
+|   |           instance.<ProductNoName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 4, BillItem.ProductNoName)
+|   |           instance.<ProductNumber>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 5, BillItem.ProductNumber)
+|   |           instance.<Shop>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 6, BillItem.Shop)
+|   |           instance.<UserId>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 7, BillItem.UserId)
+|   |           return instance
+|   |       }), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: BillItem }, 
+|   |__ entityAccessors: List<Func<BillItem, object>> 
+|       { 
+|           Func<BillItem, BillItem>, 
+|       }), 
+|__ contextType: SaturdayDemo.Infrastructure.DataBase.MyDbContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+2019-05-12 18:49:29.785 +08:00 [DBG] Opening connection to database 'liulurong' on server '47.112.204.22'.
+2019-05-12 18:49:29.806 +08:00 [DBG] Opened connection to database 'liulurong' on server '47.112.204.22'.
+2019-05-12 18:49:29.816 +08:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 18:49:29.830 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 18:49:29.884 +08:00 [DBG] Context 'MyDbContext' started tracking 'BillItem' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-05-12 18:49:29.918 +08:00 [DBG] A data reader was disposed.
+2019-05-12 18:49:29.919 +08:00 [DBG] Closing connection to database 'liulurong' on server '47.112.204.22'.
+2019-05-12 18:49:29.921 +08:00 [DBG] Closed connection to database 'liulurong' on server '47.112.204.22'.
+2019-05-12 18:49:29.931 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 243.56730000000002ms.
+2019-05-12 18:49:29.939 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"]
+2019-05-12 18:49:29.946 +08:00 [DBG] No information found on request to perform content negotiation.
+2019-05-12 18:49:29.948 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2019-05-12 18:49:29.951 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2019-05-12 18:49:29.954 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+2019-05-12 18:49:29.957 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 18:49:30.040 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 362.2511ms
+2019-05-12 18:49:30.050 +08:00 [DBG] Connection id "0HLMMOU118R9R" completed keep alive response.
+2019-05-12 18:49:30.066 +08:00 [DBG] 'MyDbContext' disposed.
+2019-05-12 18:49:30.069 +08:00 [INF] Request finished in 611.1989ms 200 application/json; charset=utf-8
+2019-05-12 21:31:43.892 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:31:44.895 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 21:31:45.022 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 21:31:46.141 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:31:46.373 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:31:46.388 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:31:46.489 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 111.7967ms
+2019-05-12 21:31:46.492 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: xxxxxxxxxxx
+   at SaturdayDemo.Web.Controllers.BillItemController.Get() in J:\TestWebProject\SaturdayDemo\SaturdayDemo\SaturdayDemo.Web\Controllers\BillItemController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-05-12 21:31:46.660 +08:00 [INF] Request finished in 519.3284ms 500 text/html; charset=utf-8
+2019-05-12 21:31:47.052 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2019-05-12 21:31:47.058 +08:00 [INF] Request finished in 5.8685ms 404 
+2019-05-12 21:33:21.757 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:33:22.724 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 21:33:22.855 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 21:33:24.409 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:33:24.597 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:33:24.610 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:33:24.614 +08:00 [ERR] 2019年5月12日
+2019-05-12 21:33:24.619 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:33:24.731 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 21:33:24.820 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 206.006ms.
+2019-05-12 21:33:24.830 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 21:33:24.914 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 313.7781ms
+2019-05-12 21:33:24.922 +08:00 [INF] Request finished in 513.8848ms 200 application/json; charset=utf-8
+2019-05-12 21:35:18.536 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:35:19.485 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 21:35:19.602 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 21:35:21.303 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:35:21.518 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:35:21.535 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:35:21.540 +08:00 [ERR] 2019年5月12日
+2019-05-12 21:35:21.544 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:35:21.665 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 21:35:21.753 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 213.9306ms.
+2019-05-12 21:35:21.763 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 21:35:21.852 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 323.2416ms
+2019-05-12 21:35:21.862 +08:00 [INF] Request finished in 561.5023ms 200 application/json; charset=utf-8
+2019-05-12 21:36:54.059 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:36:55.011 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 21:36:55.131 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 21:36:56.846 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:36:57.029 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:36:57.044 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:36:57.048 +08:00 [ERR] 2019年5月12日
+2019-05-12 21:36:57.053 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:36:57.159 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 21:36:57.249 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 200.6936ms.
+2019-05-12 21:36:57.259 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 21:36:57.343 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 309.257ms
+2019-05-12 21:36:57.354 +08:00 [INF] Request finished in 508.4762ms 200 application/json; charset=utf-8
+2019-05-12 21:36:58.961 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:36:58.963 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:36:58.965 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:36:58.969 +08:00 [ERR] 2019年5月12日
+2019-05-12 21:36:58.973 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:36:59.002 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 21:36:59.007 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 37.502900000000004ms.
+2019-05-12 21:36:59.009 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 21:36:59.011 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 46.9561ms
+2019-05-12 21:36:59.015 +08:00 [INF] Request finished in 54.8011ms 200 application/json; charset=utf-8
+2019-05-12 21:37:04.559 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:37:04.560 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:37:04.562 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:37:04.564 +08:00 [ERR] 2019年5月12日
+2019-05-12 21:37:04.566 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:37:04.596 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 21:37:04.600 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 35.582ms.
+2019-05-12 21:37:04.603 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 21:37:04.604 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 42.0266ms
+2019-05-12 21:37:04.607 +08:00 [INF] Request finished in 48.7526ms 200 application/json; charset=utf-8
+2019-05-12 21:38:39.492 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:38:40.441 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 21:38:40.561 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 21:38:41.937 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:38:42.128 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:38:42.142 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:38:46.400 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:38:46.504 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 21:38:46.592 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4446.1687ms.
+2019-05-12 21:38:46.604 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 21:38:46.689 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 4556.526ms
+2019-05-12 21:38:46.717 +08:00 [INF] Request finished in 4780.2469ms 200 application/json; charset=utf-8
+2019-05-12 21:38:54.667 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:38:54.669 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:38:54.672 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:38:57.999 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:38:58.027 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 21:38:58.032 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3358.4067ms.
+2019-05-12 21:38:58.035 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 21:38:58.038 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 3367.0227ms
+2019-05-12 21:38:58.040 +08:00 [INF] Request finished in 3373.2762ms 200 application/json; charset=utf-8
+2019-05-12 21:45:05.604 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 21:45:06.562 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 21:45:06.680 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 21:45:08.208 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 21:45:08.400 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 21:45:08.416 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 21:45:08.484 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 78.94550000000001ms
+2019-05-12 21:45:08.487 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: xxxxxxxxxxx
+   at SaturdayDemo.Web.Controllers.BillItemController.Get() in J:\TestWebProject\SaturdayDemo\SaturdayDemo\SaturdayDemo.Web\Controllers\BillItemController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-05-12 21:45:08.607 +08:00 [INF] Request finished in 399.8255ms 500 text/html; charset=utf-8
+2019-05-12 22:12:28.969 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:12:29.921 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 22:12:30.044 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 22:12:31.783 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 22:12:31.997 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 22:12:32.010 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 22:12:32.016 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:12:32.119 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 22:12:32.213 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 199.1797ms.
+2019-05-12 22:12:32.225 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 22:12:32.314 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 304.88620000000003ms
+2019-05-12 22:12:32.322 +08:00 [INF] Request finished in 540.3815ms 200 application/json; charset=utf-8
+2019-05-12 22:12:41.907 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger  
+2019-05-12 22:12:41.911 +08:00 [INF] Request finished in 3.9287ms 301 
+2019-05-12 22:12:41.914 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-12 22:12:41.947 +08:00 [INF] Request finished in 32.7562ms 200 text/html
+2019-05-12 22:12:41.969 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css  
+2019-05-12 22:12:41.976 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js  
+2019-05-12 22:12:41.969 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js  
+2019-05-12 22:12:42.008 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2019-05-12 22:12:42.008 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2019-05-12 22:12:42.016 +08:00 [INF] Request finished in 46.949ms 200 text/css
+2019-05-12 22:12:42.016 +08:00 [INF] Request finished in 46.9ms 200 application/javascript
+2019-05-12 22:12:42.021 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2019-05-12 22:12:42.024 +08:00 [INF] Request finished in 54.1975ms 200 application/javascript
+2019-05-12 22:12:42.522 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-12 22:12:42.544 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png  
+2019-05-12 22:12:42.553 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2019-05-12 22:12:42.562 +08:00 [INF] Request finished in 18.3143ms 200 image/png
+2019-05-12 22:12:42.565 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-16x16.png  
+2019-05-12 22:12:42.567 +08:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2019-05-12 22:12:42.573 +08:00 [INF] Request finished in 8.1602ms 200 image/png
+2019-05-12 22:12:42.643 +08:00 [INF] Request finished in 121.4023ms 200 application/json;charset=utf-8
+2019-05-12 22:13:17.164 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 22:13:17.168 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 22:13:17.176 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 22:13:17.182 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:13:17.211 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 22:13:17.214 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 32.6485ms.
+2019-05-12 22:13:17.217 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 22:13:17.218 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 42.8673ms
+2019-05-12 22:13:17.224 +08:00 [INF] Request finished in 60.0917ms 200 application/json; charset=utf-8
+2019-05-12 22:14:26.853 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/billitem?Market=%E4%B8%AD%E5%A4%A7&Shop=201&ProductNoName=%E7%9F%AD%E8%A2%96209&ProductNumber=20&Price=50&UserId=2  0
+2019-05-12 22:14:26.879 +08:00 [INF] Route matched with {action = "Post", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Post (SaturdayDemo.Web)
+2019-05-12 22:14:26.912 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Post (SaturdayDemo.Web) with arguments (["SaturdayDemo.Core.entities.BillItem"]) - Validation state: "Valid"
+2019-05-12 22:14:26.924 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:14:27.160 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = -1), @p2='?' (DbType = Single), @p3='?' (Size = -1), @p4='?' (DbType = Int32), @p5='?' (Size = -1), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `BillItems` (`CreationDate`, `Market`, `Price`, `ProductNoName`, `ProductNumber`, `Shop`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `Id`
+FROM `BillItems`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2019-05-12 22:14:27.213 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Post (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkResult in 292.8601ms.
+2019-05-12 22:14:27.219 +08:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-05-12 22:14:27.222 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Post (SaturdayDemo.Web) in 339.5715ms
+2019-05-12 22:14:27.225 +08:00 [INF] Request finished in 372.161ms 200 
+2019-05-12 22:14:44.418 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 22:14:44.422 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 22:14:44.425 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 22:14:44.431 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:14:44.460 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 22:14:44.464 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 33.619ms.
+2019-05-12 22:14:44.467 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 22:14:44.469 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 44.6593ms
+2019-05-12 22:14:44.474 +08:00 [INF] Request finished in 55.5693ms 200 application/json; charset=utf-8
+2019-05-12 22:18:14.638 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:18:15.634 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 22:18:15.767 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 22:18:17.268 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 22:18:17.551 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 22:18:17.564 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 22:18:17.572 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:18:17.689 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 22:18:17.776 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 207.9606ms.
+2019-05-12 22:18:17.788 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 22:18:17.875 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 314.46320000000003ms
+2019-05-12 22:18:17.883 +08:00 [INF] Request finished in 615.6299ms 200 application/json; charset=utf-8
+2019-05-12 22:18:28.084 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-12 22:18:28.124 +08:00 [INF] Request finished in 40.378ms 200 text/html
+2019-05-12 22:18:28.580 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-12 22:18:28.693 +08:00 [INF] Request finished in 112.9463ms 200 application/json;charset=utf-8
+2019-05-12 22:19:07.990 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:19:08.972 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 22:19:09.098 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 22:19:10.208 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 22:19:10.448 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 22:19:10.462 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 22:19:10.470 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:19:10.583 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 22:19:10.674 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 207.8785ms.
+2019-05-12 22:19:10.687 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 22:19:10.787 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 333.19350000000003ms
+2019-05-12 22:19:10.795 +08:00 [INF] Request finished in 588.509ms 200 application/json; charset=utf-8
+2019-05-12 22:19:20.494 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-12 22:19:20.529 +08:00 [INF] Request finished in 35.548ms 200 text/html
+2019-05-12 22:19:20.800 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-12 22:19:20.900 +08:00 [INF] Request finished in 100.795ms 200 application/json;charset=utf-8
+2019-05-12 22:20:11.742 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:20:12.692 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-12 22:20:12.811 +08:00 [INF] User profile is available. Using 'C:\Users\sqtju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-12 22:20:13.938 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-12 22:20:14.145 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-12 22:20:14.159 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-12 22:20:14.166 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-12 22:20:14.275 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationDate`, `b`.`Market`, `b`.`Price`, `b`.`ProductNoName`, `b`.`ProductNumber`, `b`.`Shop`, `b`.`UserId`
+FROM `BillItems` AS `b`
+2019-05-12 22:20:14.378 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 215.5413ms.
+2019-05-12 22:20:14.390 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-12 22:20:14.469 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 315.48830000000004ms
+2019-05-12 22:20:14.479 +08:00 [INF] Request finished in 541.3839ms 200 application/json; charset=utf-8
+2019-05-12 22:20:23.756 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-12 22:20:23.794 +08:00 [INF] Request finished in 37.5212ms 200 text/html
+2019-05-12 22:20:24.056 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-12 22:20:24.159 +08:00 [INF] Request finished in 103.1848ms 200 application/json;charset=utf-8

@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using SaturdayDemo.Infrastructure.DataBase;
+using Serilog;
+using Serilog.Events;
 
 namespace SaturdayDemo.Web
 {
@@ -16,6 +18,15 @@ namespace SaturdayDemo.Web
     {
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .WriteTo.File(Path.Combine("logs", @"log.txt"), rollingInterval: RollingInterval.Day)
+                .CreateLogger();
+
+
             var webHost = CreateWebHostBuilder(args).Build();
             using (var serviceScope = webHost.Services.CreateScope())
             {
@@ -30,6 +41,8 @@ namespace SaturdayDemo.Web
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .UseSerilog();
+
     }
 }

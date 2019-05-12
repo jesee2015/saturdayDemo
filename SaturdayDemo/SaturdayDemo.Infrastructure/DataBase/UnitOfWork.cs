@@ -18,7 +18,10 @@ namespace SaturdayDemo.Infrastructure.DataBase
 
         public async Task<bool> SaveAsync(BaseEntity entity)
         {
-            entity.CreationDate = DateTime.Now;
+            if (entity != null)
+            {
+                entity.CreationDate = DateTime.Now;
+            }
             return await MyDbContext.SaveChangesAsync() > 0;
         }
     }
