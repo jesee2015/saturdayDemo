@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using SaturdayDemo.Core.entities;
 using SaturdayDemo.Core.interfaces;
 using SaturdayDemo.Infrastructure.DataBase;
@@ -25,19 +27,20 @@ namespace SaturdayDemo.Web.Controllers
         public async Task<IActionResult> Get()
         {
             var billItems = await BillItemRepository.GetAllAsync();
+            var strObjs = JsonConvert.SerializeObject(billItems);
             return Ok(billItems);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post()
+        public async Task<IActionResult> Post(BillItem billItem)
         {
-            var billItem = new BillItem
-            {
-                Market = "wanjia",
-                ProductNoName = "308短袖",
-                ProductNumber = 20,
-                Shop = "2-3-5",
-            };
+            //var billItem = new BillItem
+            //{
+            //    Market = "wanjia",
+            //    ProductNoName = "308短袖",
+            //    ProductNumber = 20,
+            //    Shop = "2-3-5",
+            //};
             BillItemRepository.Add(billItem);
             await UnitOfWork.SaveAsync(billItem);
             return Ok();

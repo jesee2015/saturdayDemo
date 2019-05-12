@@ -10,6 +10,7 @@ namespace SaturdayDemo.Core.entities
         public string Shop { get; set; }
         public string ProductNoName { get; set; }
         public int ProductNumber { get; set; }
+        public float Price { get; set; }
         public int UserId { get; set; }
     }
 }

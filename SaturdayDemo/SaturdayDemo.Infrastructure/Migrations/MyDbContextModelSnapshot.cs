@@ -25,6 +25,8 @@ namespace SaturdayDemo.Infrastructure.Migrations
 
                     b.Property<string>("Market");
 
+                    b.Property<float>("Price");
+
                     b.Property<string>("ProductNoName");
 
                     b.Property<int>("ProductNumber");

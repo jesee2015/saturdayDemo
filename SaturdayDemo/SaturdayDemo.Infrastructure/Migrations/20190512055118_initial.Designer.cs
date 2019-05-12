@@ -9,7 +9,7 @@ using SaturdayDemo.Infrastructure.DataBase;
 namespace SaturdayDemo.Infrastructure.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20190511160915_initial")]
+    [Migration("20190512055118_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,8 @@ namespace SaturdayDemo.Infrastructure.Migrations
                     b.Property<DateTime>("CreationDate");
 
                     b.Property<string>("Market");
+
+                    b.Property<float>("Price");
 
                     b.Property<string>("ProductNoName");
 

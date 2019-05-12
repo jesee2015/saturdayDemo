@@ -12,12 +12,13 @@ namespace SaturdayDemo.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("MySQL:AutoIncrement", true),
                     CreationDate = table.Column<DateTime>(nullable: false),
                     Market = table.Column<string>(nullable: true),
                     Shop = table.Column<string>(nullable: true),
                     ProductNoName = table.Column<string>(nullable: true),
                     ProductNumber = table.Column<int>(nullable: false),
+                    Price = table.Column<float>(nullable: false),
                     UserId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

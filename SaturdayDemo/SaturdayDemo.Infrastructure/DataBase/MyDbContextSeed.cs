@@ -15,7 +15,7 @@ namespace SaturdayDemo.Infrastructure.DataBase
             int retryForAvailability = retry;
             try
             {
-                if (!myDbContext.BillItems.Any())
+                if (myDbContext.BillItems == null || myDbContext.BillItems.Count() == 0)
                 {
                     myDbContext.BillItems.AddRange(new List<BillItem>
                 {
@@ -25,6 +25,7 @@ namespace SaturdayDemo.Infrastructure.DataBase
                         Market ="nancheng",
                         ProductNoName="208连衣裙",
                         ProductNumber=30,
+                        Price=50,
                         Shop="3-1-32",
                     },
                     new BillItem
@@ -33,6 +34,7 @@ namespace SaturdayDemo.Infrastructure.DataBase
                         Market ="南城",
                         ProductNoName="218T恤",
                         ProductNumber=20,
+                        Price=48,
                         Shop="3-5-35",
                     },
                 });
