@@ -40,10 +40,21 @@ namespace SaturdayDemo.Infrastructure.Repositories
             MyDbContext.BillItems.Remove(billItem);
         }
 
-        public async Task<IEnumerable<BillItem>> GetByDate(DateTime dateTime)
+        public async Task<IEnumerable<BillItem>> GetByDateAsync(DateTime dateTime)
         {
             var date = dateTime.Date;
             return await MyDbContext.BillItems.Where(c => c.CreationDate.Date == date).ToListAsync();
+        }
+
+        public async Task EditbyId(BillItem billItem)
+        {
+            var oldBillItem = await GetByIdAsync(billItem.Id);
+            oldBillItem.Market = billItem.Market;
+            oldBillItem.Price = billItem.Price;
+            oldBillItem.ProductNoName = billItem.ProductNoName;
+            oldBillItem.ProductNumber = billItem.ProductNumber;
+            oldBillItem.Shop = billItem.Shop;
+            oldBillItem.UserId = billItem.UserId;
         }
     }
 }

@@ -17,26 +17,32 @@ namespace SaturdayDemo.Web.Controllers
     [Route("api/billitem")]
     public class BillItemController : Controller
     {
-        public BillItemController(IBillItemRepository billItemRepository, IUnitOfWork unitOfWork
-            , ILogger<BillItemController> logger, IConfiguration configuration)
+        public IBillItemRepository BillItemRepository { get; }
+        public IUnitOfWork UnitOfWork { get; }
+        public BillItemController(IBillItemRepository billItemRepository, IUnitOfWork unitOfWork)
         {
             BillItemRepository = billItemRepository;
             UnitOfWork = unitOfWork;
-            Logger = logger;
-            Configuration = configuration;
         }
-        public IBillItemRepository BillItemRepository { get; }
-        public IUnitOfWork UnitOfWork { get; }
-        public ILogger<BillItemController> Logger { get; }
-        public IConfiguration Configuration { get; }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-
-            string conStr = Configuration["user:name"];
+            //string conStr = Configuration["user:name"];
             //throw new Exception("xxxxxxxxxxx");
             var billItems = await BillItemRepository.GetAllAsync();
+            BillItemList vm = new BillItemList();
+            vm.BillItems = billItems;
+            vm.totleNum = billItems.Sum(c => c.ProductNumber);
+            vm.amount = billItems.Sum(c => c.ProductNumber * c.Price);
+            return Ok(vm);
+        }
+
+        [HttpGet]
+        [Route("GetbyDate")]
+        public async Task<IActionResult> GetbyDate(DateTime dateTime)
+        {
+            var billItems = await BillItemRepository.GetByDateAsync(dateTime);
             BillItemList vm = new BillItemList();
             vm.BillItems = billItems;
             vm.totleNum = billItems.Sum(c => c.ProductNumber);
@@ -57,6 +63,14 @@ namespace SaturdayDemo.Web.Controllers
         {
             await BillItemRepository.DeleteById(id);
             await UnitOfWork.SaveAsync(null);
+            return Ok(new { Code = 200 });
+        }
+        [HttpPost]
+        [Route("edit")]
+        public async Task<IActionResult> EditById(BillItem billItem)
+        {
+            await BillItemRepository.EditbyId(billItem);
+            await UnitOfWork.SaveAsync(billItem);
             return Ok(new { Code = 200 });
         }
     }
