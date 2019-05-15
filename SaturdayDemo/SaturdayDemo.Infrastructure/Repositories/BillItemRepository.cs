@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SaturdayDemo.Core.entities;
 using SaturdayDemo.Core.interfaces;
 using SaturdayDemo.Infrastructure.DataBase;
@@ -12,26 +13,32 @@ namespace SaturdayDemo.Infrastructure.Repositories
 {
     public class BillItemRepository : IBillItemRepository
     {
+        public MyDbContext MyDbContext { get; }
         public BillItemRepository(MyDbContext myDbContext)
         {
             MyDbContext = myDbContext;
         }
 
-        public MyDbContext MyDbContext { get; }
-
+        [HttpPost]
         public void Add(BillItem billItem)
         {
+            billItem.CreationDate = DateTime.Now;
             MyDbContext.BillItems.Add(billItem);
         }
 
         public async Task<IEnumerable<BillItem>> GetAllAsync()
         {
-            return await MyDbContext.BillItems.ToListAsync();
+            return await MyDbContext.BillItems.OrderByDescending(c => c.CreationDate).ToListAsync();
         }
 
         public async Task<BillItem> GetByIdAsync(int id)
         {
             return await MyDbContext.BillItems.FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public async Task<IEnumerable<BillItem>> GetByMonthAsync(int month)
+        {
+            return await MyDbContext.BillItems.Where(c => c.CreationDate.Month == month).OrderByDescending(c => c.CreationDate).ToListAsync();
         }
 
         public async Task DeleteById(int id)
@@ -43,7 +50,7 @@ namespace SaturdayDemo.Infrastructure.Repositories
         public async Task<IEnumerable<BillItem>> GetByDateAsync(DateTime dateTime)
         {
             var date = dateTime.Date;
-            return await MyDbContext.BillItems.Where(c => c.CreationDate.Date == date).ToListAsync();
+            return await MyDbContext.BillItems.Where(c => c.CreationDate.Date == date).OrderByDescending(c => c.CreationDate).ToListAsync();
         }
 
         public async Task EditbyId(BillItem billItem)
@@ -56,5 +63,16 @@ namespace SaturdayDemo.Infrastructure.Repositories
             oldBillItem.Shop = billItem.Shop;
             oldBillItem.UserId = billItem.UserId;
         }
+
+        //public async<> Task GetAnalysisByMonth(int month)
+        //{
+        //    var billItems = await GetByMonthAsync(month);
+        //    var Analysis = billItems.GroupBy(c => c.CreationDate.Date).Select(bill => new
+        //    {
+        //        date = bill.Key,
+        //        num = bill.Sum(c => c.ProductNumber)
+        //    }).ToList();
+        //    return Analysis;
+        //}
     }
 }

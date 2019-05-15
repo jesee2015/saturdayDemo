@@ -16,12 +16,8 @@ namespace SaturdayDemo.Infrastructure.DataBase
 
         public MyDbContext MyDbContext { get; }
 
-        public async Task<bool> SaveAsync(BaseEntity entity)
+        public async Task<bool> SaveAsync()
         {
-            if (entity != null)
-            {
-                entity.CreationDate = DateTime.Now;
-            }
             return await MyDbContext.SaveChangesAsync() > 0;
         }
     }

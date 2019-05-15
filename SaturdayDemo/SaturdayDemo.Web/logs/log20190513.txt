@@ -466,3 +466,54 @@ FROM `BillItems` AS `c`
 2019-05-13 11:29:45.180 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
 2019-05-13 11:29:45.247 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.GetbyDate (SaturdayDemo.Web) in 747.67630000000008ms
 2019-05-13 11:29:45.269 +08:00 [INF] Request finished in 957.2613ms 200 application/json; charset=utf-8
+2019-05-13 15:09:20.987 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-13 15:09:22.780 +08:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-13 15:09:23.057 +08:00 [INF] User profile is available. Using 'C:\Users\柳曦\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-13 15:09:24.900 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-13 15:09:25.183 +08:00 [INF] Request finished in 284.7224ms 200 text/html
+2019-05-13 15:09:25.598 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-13 15:09:25.964 +08:00 [INF] Request finished in 365.8848ms 200 application/json;charset=utf-8
+2019-05-13 15:13:07.885 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-13 15:13:09.513 +08:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-13 15:13:09.700 +08:00 [INF] User profile is available. Using 'C:\Users\柳曦\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-13 15:13:10.920 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-13 15:13:11.335 +08:00 [INF] Request finished in 417.3504ms 200 text/html
+2019-05-13 15:13:11.706 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-13 15:13:12.132 +08:00 [INF] Request finished in 425.9308ms 200 application/json;charset=utf-8
+2019-05-13 15:13:18.192 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-13 15:13:18.326 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-13 15:13:18.357 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-13 15:13:18.374 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-13 15:13:18.619 +08:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`CreationDate`, `c`.`Market`, `c`.`Price`, `c`.`ProductNoName`, `c`.`ProductNumber`, `c`.`Shop`, `c`.`UserId`
+FROM `BillItems` AS `c`
+ORDER BY `c`.`CreationDate`
+2019-05-13 15:13:18.840 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 466.7364ms.
+2019-05-13 15:13:18.890 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-13 15:13:18.967 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 616.649ms
+2019-05-13 15:13:18.982 +08:00 [INF] Request finished in 789.834ms 200 application/json; charset=utf-8
+2019-05-13 15:13:53.687 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-13 15:13:55.340 +08:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-13 15:13:55.592 +08:00 [INF] User profile is available. Using 'C:\Users\柳曦\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-13 15:13:57.115 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-13 15:13:57.362 +08:00 [INF] Request finished in 248.0494ms 200 text/html
+2019-05-13 15:13:57.920 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-13 15:13:58.300 +08:00 [INF] Request finished in 380.0074ms 200 application/json;charset=utf-8
+2019-05-13 15:14:15.925 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-13 15:14:16.049 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-13 15:14:16.082 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-13 15:14:16.099 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-13 15:14:16.396 +08:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`CreationDate`, `c`.`Market`, `c`.`Price`, `c`.`ProductNoName`, `c`.`ProductNumber`, `c`.`Shop`, `c`.`UserId`
+FROM `BillItems` AS `c`
+ORDER BY `c`.`CreationDate` DESC
+2019-05-13 15:14:16.506 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 413.0017ms.
+2019-05-13 15:14:16.528 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-13 15:14:16.562 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 499.2812ms
+2019-05-13 15:14:16.567 +08:00 [INF] Request finished in 642.3187ms 200 application/json; charset=utf-8

@@ -1,0 +1,27 @@
+2019-05-14 11:21:46.473 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 11:21:48.132 +08:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `BillItems` AS `b`
+2019-05-14 11:21:48.306 +08:00 [INF] User profile is available. Using 'C:\Users\柳曦\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 11:21:49.343 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-14 11:21:49.665 +08:00 [INF] Request finished in 323.5245ms 200 text/html
+2019-05-14 11:21:50.109 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-14 11:21:50.457 +08:00 [INF] Request finished in 348.4576ms 200 application/json;charset=utf-8
+2019-05-14 11:22:02.302 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/billitem  
+2019-05-14 11:22:02.432 +08:00 [INF] Route matched with {action = "Get", controller = "BillItem"}. Executing action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web)
+2019-05-14 11:22:02.459 +08:00 [INF] Executing action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) - Validation state: "Valid"
+2019-05-14 11:22:02.473 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 11:22:02.696 +08:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`CreationDate`, `c`.`Market`, `c`.`Price`, `c`.`ProductNoName`, `c`.`ProductNumber`, `c`.`Shop`, `c`.`UserId`
+FROM `BillItems` AS `c`
+ORDER BY `c`.`CreationDate` DESC
+2019-05-14 11:22:02.846 +08:00 [INF] Executed action method SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 376.46430000000004ms.
+2019-05-14 11:22:02.868 +08:00 [INF] Executing ObjectResult, writing value of type 'SaturdayDemo.Web.ViewModel.BillItemList'.
+2019-05-14 11:22:02.897 +08:00 [INF] Executed action SaturdayDemo.Web.Controllers.BillItemController.Get (SaturdayDemo.Web) in 455.5897ms
+2019-05-14 11:22:02.903 +08:00 [INF] Request finished in 601.1713ms 200 application/json; charset=utf-8
+2019-05-14 11:22:03.114 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2019-05-14 11:22:03.123 +08:00 [INF] Request finished in 9.2604ms 404 
+2019-05-14 11:22:09.163 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+2019-05-14 11:22:09.167 +08:00 [INF] Request finished in 3.9838ms 200 text/html
+2019-05-14 11:22:09.366 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2019-05-14 11:22:09.373 +08:00 [INF] Request finished in 6.7619ms 200 application/json;charset=utf-8

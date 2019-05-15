@@ -14,5 +14,7 @@ namespace SaturdayDemo.Core.interfaces
         void Add(BillItem billItem);
         Task DeleteById(int id);
         Task EditbyId(BillItem billItem);
+        Task<IEnumerable<BillItem>> GetByMonthAsync(int month);
+       
     }
 }

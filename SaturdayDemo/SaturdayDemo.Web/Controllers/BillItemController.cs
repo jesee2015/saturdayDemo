@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -53,25 +54,54 @@ namespace SaturdayDemo.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(BillItem billItem)
         {
+            if (billItem == null)
+            {
+                return BadRequest(StatusCodes.Status400BadRequest);
+            }
             BillItemRepository.Add(billItem);
-            await UnitOfWork.SaveAsync(billItem);
-            return Ok();
+            await UnitOfWork.SaveAsync();
+            return Ok(new { Code = 200 });
         }
         [HttpPost]
         [Route("delete")]
         public async Task<IActionResult> DeleteById(int id)
         {
+            if (id < 1)
+            {
+                return BadRequest(StatusCodes.Status400BadRequest);
+            }
             await BillItemRepository.DeleteById(id);
-            await UnitOfWork.SaveAsync(null);
+            await UnitOfWork.SaveAsync();
             return Ok(new { Code = 200 });
         }
         [HttpPost]
         [Route("edit")]
         public async Task<IActionResult> EditById(BillItem billItem)
         {
+            if (billItem == null)
+            {
+                return BadRequest(StatusCodes.Status400BadRequest);
+            }
             await BillItemRepository.EditbyId(billItem);
-            await UnitOfWork.SaveAsync(billItem);
+            await UnitOfWork.SaveAsync();
             return Ok(new { Code = 200 });
         }
+
+        [Route("GetAnalysisByMonth")]
+        public async Task<IActionResult> GetAnalysisByMonth(int month)
+        {
+            if (month > 12 || month < 1)
+            {
+                return BadRequest(StatusCodes.Status400BadRequest);
+            }
+            var billItems = await BillItemRepository.GetByMonthAsync(month);
+            var Analysis = billItems.GroupBy(c => c.CreationDate.Date).Select(bill => new
+            {
+                date = bill.Key,
+                num = bill.Sum(c => c.ProductNumber)
+            }).ToList();
+            return Ok(Analysis);
+        }
+
     }
 }

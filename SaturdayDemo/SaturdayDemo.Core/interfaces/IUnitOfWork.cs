@@ -8,6 +8,6 @@ namespace SaturdayDemo.Core.interfaces
 {
     public interface IUnitOfWork
     {
-        Task<bool> SaveAsync(BaseEntity entity);
+        Task<bool> SaveAsync();
     }
 }

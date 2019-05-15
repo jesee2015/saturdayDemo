@@ -39,15 +39,17 @@ namespace SaturdayDemo.Web
             services.AddScoped<ICashFlowRepository, CashFlowRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info
-                {
-                    Version = "v1",
-                    Title = "liulurong API",
-                    Description = "liulurong mui后台"
-                });
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new Info
+            //    {
+            //        Version = "v1",
+            //        Title = "liulurong API",
+            //        Description = "liulurong mui后台"
+            //    });
+            //});
+
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info()));
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILogger<Startup> logger)
@@ -75,7 +77,7 @@ namespace SaturdayDemo.Web
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "My API V1");
             });
             app.UseMvcWithDefaultRoute();
         }
